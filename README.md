@@ -17,7 +17,14 @@ This project can be ran locally. Upon forking this repository, you just need to 
 - `npm install`
 - `npx ng serve`
 
-If you have done this properly for the main branch you should see the following appear in your browser.
+If you have done this properly for the **main** branch you should see the following appear in your browser.
 
 ![image](https://user-images.githubusercontent.com/19817876/133923613-26cdb25f-e4ad-4cf1-8c4d-d6b3561e7bbe.png)
 
+If you have done this for either the **Step-1** or **Step-2** branches then you should see something similar to the following in the browser.
+
+![image](https://user-images.githubusercontent.com/19817876/133923938-e9531ad2-86a4-4c14-a4e8-da0909bcaf19.png)
+
+## Watch on YouTube
+
+A YouTube video on how this control works will be uploaded shortly. I will place the link here once this is complete.
