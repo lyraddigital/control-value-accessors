@@ -6,9 +6,9 @@ This repository demonstrates how to create a custom form control in Angular know
 
 This repository contains 3 branches. Each branch contains the following.
 
-- Main: Contains the code before implementing the Control Value Accessor logic
-- Step-1: Contains the new slide toggle control implemented using the ControlValueAccessor interface
-- Step-2: Contains the same slide toggle control, but instead, extends the CheckboxValueAccessor interface.
+- **Main:** Contains the code before implementing the Control Value Accessor logic
+- **Step-1:** Contains the new slide toggle control implemented using the ControlValueAccessor interface
+- **Step-2:** Contains the same slide toggle control, but instead, extends the CheckboxValueAccessor interface.
 
 ## Development server
 
