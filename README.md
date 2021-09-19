@@ -1,6 +1,8 @@
-# ControlValueAccessors
+# Control Value Accessors
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.11.
+This repository demonstrates how to create a custom control in Angular known as a Control Value Accessor. It demonstrates this by starting off with using regular checkboxes (see below).
+
+![image](https://user-images.githubusercontent.com/19817876/133923613-26cdb25f-e4ad-4cf1-8c4d-d6b3561e7bbe.png)
 
 ## Development server
 
