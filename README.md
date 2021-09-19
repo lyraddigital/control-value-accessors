@@ -1,6 +1,6 @@
 # Control Value Accessors
 
-This repository demonstrates how to create a custom form control in Angular known as a **Control Value Accessor**. In short a Control Value Accessor is a component that has the ability to wire itself up to the Reactive Forms framework, making it easy to capture and validate form data. This repository will show you not only how to wire it to the Reactive Forms framework, but it will also show you how you handle the enabling / disabling of your control as well.
+This repository demonstrates how to create a custom form control in Angular known as a **Control Value Accessor**. In short a **Control Value Accessor** is a component that has the ability to wire itself up to the Reactive Forms framework, making it easy to capture and validate form data. This repository will show you not only how to wire it to the Reactive Forms framework, but it will also show you how you handle enabling / disabling of your control as well.
 
 ## Breakdown
 
