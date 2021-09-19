@@ -1,0 +1,36 @@
+#user-form {
+    padding: 1rem 0;
+}
+
+#settings {
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-columns: repeat(2, max-content 1fr);
+    justify-content: end;
+    align-items: center;
+}
+
+#buttons {
+    display: flex;
+    padding: 1.5rem 0;
+    justify-content: flex-end;
+
+    > button {
+        font-size: 1.5rem;
+        padding: 0.75rem;
+    }
+}
+
+#setting-results {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    justify-content: space-between;
+    grid-gap: 1rem;
+}
+
+.container {
+    padding: 2rem;
+    background: #EEE;
+    border: 2px solid #CCC;
+    border-radius: 0.5rem;
+}

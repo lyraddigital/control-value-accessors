@@ -1,0 +1,26 @@
+<section>
+    <header>
+        <h2>User Details</h2>
+        <h3>Settings</h3>
+    </header>
+    <form id="user-form" [formGroup]="formGroup">
+        <fieldset id="settings" class="container">
+            <label for="allow-sms-checkbox">SMS Notifications</label>
+            <input id="allow-sms-checkbox" type="checkbox" formControlName="allowSMS" />
+            <label for="allow-email-checkbox">Email Notifications</label>
+            <input id="allow-email-checkbox" type="checkbox" formControlName="allowEmail" />
+        </fieldset>
+        <div id="buttons">
+            <button (click)="updateSettings()">Submit</button>
+        </div>
+    </form>
+    <section>
+        <h3>Results</h3>
+        <div id="setting-results" class="container">
+            <div>SMS Notifications</div>
+            <div>{{ settings.allowSMS ? 'Yes': 'No' }}</div>
+            <div>Email Notifications</div>
+            <div>{{ settings.allowEmail ? 'Yes': 'No' }}</div>
+        </div>
+    </section>
+</section>
