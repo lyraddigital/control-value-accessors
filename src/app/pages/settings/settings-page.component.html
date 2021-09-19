@@ -11,6 +11,7 @@
             <input id="allow-email-checkbox" type="checkbox" formControlName="allowEmail" />
         </fieldset>
         <div id="buttons">
+            <button (click)="enableDisableForm()">{{ enableText }}</button>
             <button (click)="updateSettings()">Submit</button>
         </div>
     </form>

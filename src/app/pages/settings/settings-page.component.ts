@@ -25,4 +25,16 @@ export class SettingsPageComponent {
   updateSettings(): void {
     this.settings = this.formGroup.value;
   }
+
+  enableDisableForm(): void {
+    if (this.formGroup.enabled) {
+      this.formGroup.disable();
+    } else {
+      this.formGroup.enable();
+    }
+  }
+
+  get enableText(): string {
+    return this.formGroup.enabled ? 'Disable': 'Enable';
+  }
 }
