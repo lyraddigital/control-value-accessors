@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { SwitchComponent } from './switch.component';
+import { SlideToggleComponent } from './slide-toggle.component';
 
 @NgModule({
   declarations: [
-    SwitchComponent
+    SlideToggleComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [
-      SwitchComponent
+    SlideToggleComponent
   ]
 })
-export class SwitchModule { }
+export class SlideToggleModule { }

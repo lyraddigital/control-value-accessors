@@ -2,7 +2,7 @@
      [class.disabled]="isDisabled"
      [class.active]="isChecked"
      [class.inactive]="!isChecked" 
-     (click)="emitSwitchChanged()">
+     (click)="toggle()">
     <span class="positive-text" [hidden]="!isChecked">{{ checkedLabelText | uppercase }}</span>
     <span class="negative-text" [hidden]="isChecked">{{ uncheckedLabelText | uppercase }}</span>
     <span class="switch-toggle" 

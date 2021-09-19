@@ -1,1 +1,1 @@
-export { SwitchModule } from './switch';
+export { SlideToggleModule } from './slide-toggle';

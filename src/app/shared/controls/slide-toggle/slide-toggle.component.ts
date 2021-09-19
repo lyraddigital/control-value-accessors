@@ -1,17 +1,17 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-switch',
-  templateUrl: './switch.component.html',
-  styleUrls: ['./switch.component.scss']
+  selector: 'app-slide-toggle',
+  templateUrl: './slide-toggle.component.html',
+  styleUrls: ['./slide-toggle.component.scss']
 })
-export class SwitchComponent {
+export class SlideToggleComponent {
   @Input() checkedLabelText!: string;
   @Input() uncheckedLabelText!: string;
   isChecked = true;
   isDisabled = false;
 
-  emitSwitchChanged(): void {
+  toggle(): void {
     if (!this.isDisabled) {
       this.isChecked = !this.isChecked;
     }
