@@ -1,29 +1,23 @@
 # Control Value Accessors
 
-This repository demonstrates how to create a custom control in Angular known as a Control Value Accessor. It demonstrates this by starting off with using regular checkboxes (see below).
+This repository demonstrates how to create a custom form control in Angular known as a **Control Value Accessor**. In short a Control Value Accessor is a component that has the ability to wire itself up to the Reactive Forms framework, making it easy to capture and validate form data. This repository will show you not only how to wire it to the Reactive Forms framework, but it will also show you how you handle the enabling / disabling of your control as well.
 
-![image](https://user-images.githubusercontent.com/19817876/133923613-26cdb25f-e4ad-4cf1-8c4d-d6b3561e7bbe.png)
+## Breakdown
+
+This repository contains 3 branches. Each branch contains the following.
+
+- Main: Contains the code before implementing the Control Value Accessor logic
+- Step-1: Contains the new slide toggle control implemented using the ControlValueAccessor interface
+- Step-2: Contains the same slide toggle control, but instead, extends the CheckboxValueAccessor interface.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This project can be ran locally. Upon forking this repository, you just need to run the following commands
 
-## Code scaffolding
+- `npm install`
+- `npx ng serve`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+If you have done this properly for the main branch you should see the following appear in your browser.
 
-## Build
+![image](https://user-images.githubusercontent.com/19817876/133923613-26cdb25f-e4ad-4cf1-8c4d-d6b3561e7bbe.png)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
