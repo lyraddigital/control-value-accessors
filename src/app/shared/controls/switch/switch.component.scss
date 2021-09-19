@@ -10,10 +10,18 @@
 
   &.active {
     background-color: #070;
+
+    &.disabled {
+      background-color: #667466;
+    }
   }
 
   &.inactive {
     background-color: #700;
+
+    &.disabled {
+      background-color: #807575;
+    }
   }
 
   > .positive-text,

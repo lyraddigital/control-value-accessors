@@ -1,4 +1,5 @@
-<div class="switch" 
+<div class="switch"
+     [class.disabled]="isDisabled"
      [class.active]="isChecked"
      [class.inactive]="!isChecked" 
      (click)="emitSwitchChanged()">
@@ -8,4 +9,4 @@
           [class.active]="isChecked"
           [class.inactive]="!isChecked"></span>
 </div>
-<input type="checkbox" [checked]="isChecked" />
+<input type="checkbox" [checked]="isChecked" [disabled]="isDisabled" />

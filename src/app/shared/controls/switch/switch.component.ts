@@ -8,9 +8,12 @@ import { Component, Input } from '@angular/core';
 export class SwitchComponent {
   @Input() checkedLabelText!: string;
   @Input() uncheckedLabelText!: string;
-  isChecked = false;
+  isChecked = true;
+  isDisabled = false;
 
   emitSwitchChanged(): void {
-    this.isChecked = !this.isChecked;
+    if (!this.isDisabled) {
+      this.isChecked = !this.isChecked;
+    }
   }
 }
