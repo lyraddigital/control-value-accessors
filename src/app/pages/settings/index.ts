@@ -1,1 +1,1 @@
-export { SettingsPageComponent } from './settings-page.component';
+export { SettingsPageModule } from './settings-page.module';

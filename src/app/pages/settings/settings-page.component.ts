@@ -35,6 +35,6 @@ export class SettingsPageComponent {
   }
 
   get enableText(): string {
-    return this.formGroup.enabled ? 'Disable': 'Enable';
+    return this.formGroup.enabled ? 'Disable' : 'Enable';
   }
 }

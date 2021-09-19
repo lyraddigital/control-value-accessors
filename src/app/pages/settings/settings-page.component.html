@@ -7,8 +7,10 @@
         <fieldset id="settings" class="container">
             <label for="allow-sms-checkbox">SMS Notifications</label>
             <input id="allow-sms-checkbox" type="checkbox" formControlName="allowSMS" />
+            <!-- <app-switch checkedLabelText="Yes" uncheckedLabelText="No"></app-switch> -->
             <label for="allow-email-checkbox">Email Notifications</label>
             <input id="allow-email-checkbox" type="checkbox" formControlName="allowEmail" />
+            <!-- <app-switch checkedLabelText="Yes" uncheckedLabelText="No"></app-switch> -->
         </fieldset>
         <div id="buttons">
             <button (click)="enableDisableForm()">{{ enableText }}</button>
@@ -19,9 +21,9 @@
         <h3>Results</h3>
         <div id="setting-results" class="container">
             <div>SMS Notifications</div>
-            <div>{{ settings.allowSMS ? 'Yes': 'No' }}</div>
+            <div>{{ settings.allowSMS | yesNo }}</div>
             <div>Email Notifications</div>
-            <div>{{ settings.allowEmail ? 'Yes': 'No' }}</div>
+            <div>{{ settings.allowEmail | yesNo }}</div>
         </div>
     </section>
 </section>

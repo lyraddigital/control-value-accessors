@@ -1,23 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule } from '@angular/forms';
 
 import { LayoutComponent } from 'src/app/shared/layout';
-import { SettingsPageComponent } from 'src/app/pages';
+import { SettingsPageModule } from './pages';
 
 import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LayoutComponent,
-    SettingsPageComponent
+    LayoutComponent
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule
+    SettingsPageModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
