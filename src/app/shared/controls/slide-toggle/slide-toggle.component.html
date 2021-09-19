@@ -1,11 +1,11 @@
-<div class="switch"
+<div class="slide-toggle"
      [class.disabled]="isDisabled"
      [class.active]="isChecked"
      [class.inactive]="!isChecked" 
      (click)="toggle()">
     <span class="positive-text" [hidden]="!isChecked">{{ checkedLabelText | uppercase }}</span>
     <span class="negative-text" [hidden]="isChecked">{{ uncheckedLabelText | uppercase }}</span>
-    <span class="switch-toggle" 
+    <span class="slide-toggle-button" 
           [class.active]="isChecked"
           [class.inactive]="!isChecked"></span>
 </div>
