@@ -6,11 +6,11 @@
     <form id="user-form" [formGroup]="formGroup">
         <fieldset id="settings" class="container">
             <label for="allow-sms-checkbox">SMS Notifications</label>
-            <input id="allow-sms-checkbox" type="checkbox" formControlName="allowSMS" />
-            <!-- <app-slide-toggle checkedLabelText="Yes" uncheckedLabelText="No"></app-slide-toggle> -->
+            <!-- <input id="allow-sms-checkbox" type="checkbox" formControlName="allowSMS" /> -->
+            <app-slide-toggle formControlName="allowSMS" checkedLabelText="Yes" uncheckedLabelText="No"></app-slide-toggle>
             <label for="allow-email-checkbox">Email Notifications</label>
-            <input id="allow-email-checkbox" type="checkbox" formControlName="allowEmail" />
-            <!-- <app-slide-toggle checkedLabelText="Yes" uncheckedLabelText="No"></app-slide-toggle> -->
+            <!-- <input id="allow-email-checkbox" type="checkbox" formControlName="allowEmail" /> -->
+            <app-slide-toggle formControlName="allowEmail" checkedLabelText="Yes" uncheckedLabelText="No"></app-slide-toggle>
         </fieldset>
         <div id="buttons">
             <button (click)="enableDisableForm()">{{ enableText }}</button>
