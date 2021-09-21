@@ -1,5 +1,5 @@
 import { Component, forwardRef, Input } from '@angular/core';
-import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { CheckboxControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
   selector: 'app-slide-toggle',
@@ -13,23 +13,14 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
     }
   ]
 })
-export class SlideToggleComponent implements ControlValueAccessor {
+export class SlideToggleComponent extends CheckboxControlValueAccessor {
   @Input() checkedLabelText!: string;
   @Input() uncheckedLabelText!: string;
   isChecked = true;
   isDisabled = false;
-  onChange!: (value: boolean) => void;
 
   writeValue(value: boolean): void {
     this.isChecked = value;
-  }
-
-  registerOnChange(onChange: (value: boolean) => void): void {
-    this.onChange = onChange;
-  }
-
-  registerOnTouched(fn: any): void {
-    // We will not do anything to this control when onTouch event occurs.
   }
 
   setDisabledState(isDisabled: boolean): void {
