@@ -9,27 +9,29 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
     {
       provide: NG_VALUE_ACCESSOR,
       useExisting: forwardRef(() => SlideToggleComponent),
-      multi: true,
-    },
-  ],
+      multi: true
+    }
+  ]
 })
-export class SlideToggleComponent implements ControlValueAccessor {
+export class SlideToggleComponent implements ControlValueAccessor {  
   @Input() checkedLabelText!: string;
   @Input() uncheckedLabelText!: string;
   isChecked = true;
   isDisabled = false;
-  onChange!: (value: boolean) => void;
+  isTouched = false;
+  onChange!: (isChecked: boolean) => void;
+  onTouch!: () => void;
 
-  writeValue(value: boolean): void {
-    this.isChecked = value;
+  writeValue(checked: boolean): void {
+    this.isChecked = checked;
   }
 
-  registerOnChange(onChange: (value: boolean) => void): void {
+  registerOnChange(onChange: (isChecked: boolean) => void): void {
     this.onChange = onChange;
   }
 
-  registerOnTouched(onTouch: (value: boolean) => void): void {
-    // We will not do anything to this control when onTouch event occurs.
+  registerOnTouched(onTouch: () => void): void {
+    this.onTouch = onTouch;
   }
 
   setDisabledState(isDisabled: boolean): void {
@@ -40,6 +42,11 @@ export class SlideToggleComponent implements ControlValueAccessor {
     if (!this.isDisabled) {
       this.isChecked = !this.isChecked;
       this.onChange(this.isChecked);
+
+      if (!this.isTouched) {
+        this.isTouched = true;
+        this.onTouch();
+      }
     }
   }
 }
