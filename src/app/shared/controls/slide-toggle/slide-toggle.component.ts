@@ -1,5 +1,5 @@
 import { Component, forwardRef, Input } from '@angular/core';
-import { CheckboxControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
   selector: 'app-slide-toggle',
@@ -7,30 +7,46 @@ import { CheckboxControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms'
   styleUrls: ['./slide-toggle.component.scss'],
   providers: [
     {
-        provide: NG_VALUE_ACCESSOR,
-        useExisting: forwardRef(() => SlideToggleComponent),
-        multi: true
+      provide: NG_VALUE_ACCESSOR,
+      useExisting: forwardRef(() => SlideToggleComponent),
+      multi: true
     }
   ]
 })
-export class SlideToggleComponent extends CheckboxControlValueAccessor {
+export class SlideToggleComponent implements ControlValueAccessor {  
   @Input() checkedLabelText!: string;
   @Input() uncheckedLabelText!: string;
   isChecked = true;
   isDisabled = false;
+  isTouched = false;
+  onChange!: (isChecked: boolean) => void;
+  onTouch!: () => void;
 
-  writeValue(value: boolean): void {
-    this.isChecked = value;
+  writeValue(checked: boolean): void {
+    this.isChecked = checked;
+  }
+
+  registerOnChange(onChange: (isChecked: boolean) => void): void {
+    this.onChange = onChange;
+  }
+
+  registerOnTouched(onTouch: () => void): void {
+    this.onTouch = onTouch;
   }
 
   setDisabledState(isDisabled: boolean): void {
-    this.isDisabled = isDisabled;   
+    this.isDisabled = isDisabled;
   }
 
   toggle(): void {
     if (!this.isDisabled) {
       this.isChecked = !this.isChecked;
       this.onChange(this.isChecked);
+
+      if (!this.isTouched) {
+        this.isTouched = true;
+        this.onTouch();
+      }
     }
   }
 }
