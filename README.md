@@ -28,4 +28,4 @@ If you have done this for either the **Main** branches then you should see somet
 
 A YouTube video on how this control works can be watched here.
 
-[![Angular 12 - Building Custom Controls using Control Value Accessors](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+[![Angular 12 - Building Custom Controls using Control Value Accessors](https://user-images.githubusercontent.com/19817876/135271109-09ca6dc7-a1ab-46f3-834c-ecfe5a8fac1c.png)](https://www.youtube.com/watch?v=pRF97kss8eI)
