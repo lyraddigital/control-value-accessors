@@ -26,4 +26,6 @@ If you have done this for either the **Main** branches then you should see somet
 
 ## Watch on YouTube
 
-A YouTube video on how this control works will be uploaded shortly. I will place the link here once this is complete.
+A YouTube video on how this control works can be watched here.
+
+[![Angular 12 - Building Custom Controls using Control Value Accessors](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
